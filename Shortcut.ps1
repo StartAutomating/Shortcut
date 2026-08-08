@@ -142,7 +142,7 @@ process {
         } elseif ($url -and -not $shortcutPath) {
             # A url without a path indicates an `Href`
             'Href'
-        }   
+        }
 
     # Copy our parameters for easier debugging
     $parameters = [Ordered]@{} + $PSBoundParameters    
