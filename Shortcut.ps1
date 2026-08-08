@@ -17,7 +17,7 @@
     Shortcut ./pwsh-hello-world.lnk -PowerShell { "hello world" }
 .EXAMPLE    
     # Create a `.desktop` shortcut to a PowerShell script
-
+    Shortcut ./pwsh.desktop -TargetPath /usr/bin/pwsh
 #>
 [CmdletBinding(PositionalBinding=$false)]
 param(
