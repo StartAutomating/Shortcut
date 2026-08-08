@@ -7,6 +7,8 @@ They let us launch things at the click of a button.
 
 This can be extra handy for people who are allergic to terminals.
 
+Shortcut is a simple module to create shortcuts with scripts.
+
 ## Installing and Importing
 
 You can install Shortcut from the [PowerShell gallery](https://powershellgallery.com/)
