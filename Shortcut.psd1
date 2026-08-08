@@ -125,6 +125,12 @@ They let us launch things at the click of a button.
 This can be extra handy for people who are allergic to terminals.
 
 Shortcut is a simple module to create shortcuts with scripts.
+
+It can create:
+
+* Windows shortcuts (`.lnk` and `.url` files)
+* Linux `.desktop` shortcuts
+* HTML shortcuts `<a>`
 '@
 
         # Prerelease string of this module

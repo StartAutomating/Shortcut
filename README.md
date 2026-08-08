@@ -9,6 +9,12 @@ This can be extra handy for people who are allergic to terminals.
 
 Shortcut is a simple module to create shortcuts with scripts.
 
+It can create:
+
+* Windows shortcuts (`.lnk` and `.url` files)
+* Linux `.desktop` shortcuts
+* HTML shortcuts `<a>`
+
 ## Installing and Importing
 
 You can install Shortcut from the [PowerShell gallery](https://powershellgallery.com/)
