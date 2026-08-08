@@ -174,9 +174,7 @@ process {
                 if ($TargetPath -and -not $DesktopEntry.Exec) {
                     "Exec=$TargetPath $arguments" -replace '\s$'
                 }
-                elseif ($parameters.PowerShell -and -not $DesktopEntry.Exec) {
-                    
-                
+                elseif ($parameters.PowerShell -and -not $DesktopEntry.Exec) {                
                     "Exec=/usr/bin/pwsh $(
                         if (-not $AutoExit) {
                             '-noexit'
@@ -186,10 +184,16 @@ process {
                         }
                         "-file $PowerShell"
                     )" -replace '\s$'
+                    "Terminal=true"
                 }
                 # and output any additional values.
                 foreach ($key in $DesktopEntry.Keys) {
-                    "$key=$($DesktopEntry[$key])"
+                    if ($DesktopEntry[$key] -is [bool] -or 
+                        $DesktopEntry[$key] -is [switch]) {
+                        "$key=$(($DesktopEntry[$key] -as [bool] -as [string]).ToLower())"
+                    } else {
+                        "$key=$($DesktopEntry[$key])"
+                    }                    
                 }
             )
             # If a shortcut file path was provided
