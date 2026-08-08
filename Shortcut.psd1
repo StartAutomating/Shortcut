@@ -112,7 +112,11 @@ PrivateData = @{
 '@
 
         PSIntro = @'
+Shortcuts can be handy.
 
+They let us launch things at the click of a button.
+
+This can be extra handy for people who are allergic to terminals.
 '@
 
         # Prerelease string of this module
